@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  color: hsl(238, 29%, 16%);
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+  height: calc(100vh + 50px);
+}
+body #illustration-mobile {
+  width: 240px;
+  position: relative;
+  transform: translateY(90px);
+}
+body #illustration-box {
+  display: none;
+}
+body #illustration-desktop {
+  display: none;
+}
+body main {
+  background-color: white;
+  width: 330px;
+  max-width: 520px;
+  margin: 1rem;
+  padding: 1rem;
+  padding-top: 0;
+  border-radius: 20px;
+  padding-bottom: 3rem;
+}
+body main img {
+  display: block;
+  margin: auto;
+}
+body main h1 {
+  text-align: center;
+  font-size: 32px;
+  padding: 20px;
+}
+body main section {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 1rem 0;
+  cursor: pointer;
+}
+body main section div {
+  display: flex;
+  justify-content: space-between;
+}
+body main section div h2 {
+  padding: 0.2rem 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+body main section div img {
+  margin: 0;
+  margin-top: 10px;
+  width: 10px;
+  height: 7px;
+}
+body main section p {
+  padding: 10px 0;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+  body #illustration-mobile {
+    display: none;
+  }
+  body #illustration-desktop {
+    display: block;
+    position: absolute;
+    scale: 0.7;
+    transform: translate(-20px, -70px);
+  }
+  body #illustration-box {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    scale: 0.7;
+    transform: translate(15px, -30px);
+  }
+  body main {
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: 350px;
+    background-repeat: no-repeat;
+  }
+  body main #pattern-mobile {
+    display: none;
+  }
+  body main #half {
+    width: 50%;
+  }
+  body main #half h1 {
+    text-align: left;
+    padding: 25px 0 0 0;
+  }
+  body main h2:hover {
+    color: hsl(14, 88%, 65%);
+  }
+}/*# sourceMappingURL=style.css.map */
